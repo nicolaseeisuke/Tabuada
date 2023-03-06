@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    
+    background: #23242af9;
+    font-family: 'Poppins' sans-serif;
+    font-size: large;
+    }
+
+    header{
+        color: #45f3ff;
+        text-align: center;
+    
+    }
+    
+    .box{
+    position: relative;
+    background: #1c1c1c;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.592);
+    }
+    
+    .box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 500px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right ;
+    animation: animate 6s linear  infinite;
+    }
+
+    .box::after{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left:-50%;
+        width: 500px;
+        height: 420px;
+        background: linear-gradient(0deg,transparent, #45f3ff, #45f3ff);
+        transform-origin: bottom right ;
+        animation: animate 6s linear  infinite;
+        animation-delay:-3s ;
+    }
+    
+    @keyframes animate{
+        0%{
+            transform: rotate(0deg);
+        } 100%{
+            transform: rotate(360deg);
+        }
+    }
+    
+    .form{
+        position: absolute;
+        inset: 2px;
+        border-radius: 8px;
+        background: #28292d;
+        color: #45f3ff;
+        z-index: 10 ;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .form h1{
+        color:#45f3ff;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.1em;
+    }
+
+    #txtn , #seltab{
+        background-color: #fff;
+        opacity: 0.8;
+    }
+
+    #txtn, #gerar{
+        border-radius: 8px;
+    }
+    
+    #gerar:hover{
+        background-color: lightblue;
+
+    }
+
+    #seltab{
+        position: relative;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 0 0 8px 8px;
+    }
+    
+ 
+    footer{
+        color: #45f3ff;
+        font-style: italic;
+        text-align: center;
+    
+    }
